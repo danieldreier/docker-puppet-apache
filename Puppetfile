@@ -1,0 +1,12 @@
+# Configuration for librarian-puppet.
+forge "http://forge.puppetlabs.com"
+mod "hunner/hiera"
+mod "example42/php"
+mod "example42/timezone"
+mod "example42/puppi"
+mod "puppetlabs/apt"
+mod "puppetlabs/concat"
+mod "puppetlabs/stdlib"
+mod "puppetlabs/apache"
+mod "puppetlabs/vcsrepo"
+#mod "Slashbunny/phpfpm"

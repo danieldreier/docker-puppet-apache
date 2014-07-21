@@ -1,0 +1,27 @@
+---
+#nginx::nginx_vhosts:
+#  'www.example.com':
+#    www_root: '/var/www/example.com/www'
+#    listen_port: 80
+#    listen_options: default
+#nginx::nginx_upstreams:
+#  'phpfpm':
+#    ensure: present
+#    members:
+#      - localhost:127.0.0.1
+site::roles::webserver::vhosts:
+  example_http:
+    servername: example.com
+    vhost_name: "_default_"
+    port: "80"
+    ip_based: true
+    docroot: "/var/www/example.com/www"
+    docroot_owner: www-data
+    docroot_group: www-data
+    serveraliases:
+      - www.example.com
+    override: "All"
+classes:
+  - site::roles::base
+  - site::roles::webserver
+  - site::roles::webserver::php
