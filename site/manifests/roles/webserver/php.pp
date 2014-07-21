@@ -22,10 +22,10 @@ class site::roles::webserver::php {
       php::module { 'mysql': }
       php::module { 'gd': }
       package { 'libpcre3-dev': ensure => 'installed' }
-      php::pecl::module { 'apc':
-        use_package => false,
-        require     => Package['libpcre3-dev'],
-      }
+#      php::pecl::module { 'apc':
+#        use_package => false,
+#        require     => Package['libpcre3-dev'],
+#      }
     }
     default: {
       php::module { 'mysql': }

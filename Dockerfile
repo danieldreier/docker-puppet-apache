@@ -1,10 +1,7 @@
 FROM danieldreier/wheezy-puppet-agent
-MAINTAINER Daniel Dreier <daniel@deployto.me>
+MAINTAINER Daniel Dreier <ddreier@thinkplango.com>
 
 EXPOSE 80
-VOLUME /var/www
-VOLUME /etc/php5
-VOLUME /etc/puppet/hieradata
 RUN mkdir -p /var/www/example.com
 #RUN echo "<?php phpinfo(); ?>" > /var/www/example.com/www/index.php
 ADD www /var/www/example.com/www
